@@ -1,20 +1,30 @@
-#include<stdbli.h>
+#include<stdlib.h>
 #include<time.h>
 #include<stdio.h>
+
 int main (){
-int matriz[5][5],i,j,matrizt[5][5];
-for(i=0,i<5,i++)
-for(j=0,j,5,j++)
-matriz[i][j]= rand()%25+1;
-for(i=0,i<5,i++)
-for(j=0,j,5,j++){
-printf("%d", matriz[i][j]);
-printf("\n");}
+void matrizaleatoria (int matriz[5][5],int i, int j);{
+srand(time(NULL));
 for(i=0,i<5,i++)
 for(j=0,j<5,j++)
-matrizt[i][j]=matriz[j][i];
+matriz[i][j]= rand()%25+1;
+}
+void imprimematriz(int matriz[5][5],int i, int j);{
 for(i=0,i<5,i++)
 for(j=0,j<5,j++){
-printf("%d",matrizt[i][j]);
-printf("\n");
-return 0;}
+printf("%d",matriz[i][j]);
+printf("\n");}
+}
+void matriztransposta(int matriz[5][5],int matrizt[5][5],int i,int j);{
+matrizaleatoria(matriz,5,5);
+for(i=0,i<5,i++)
+for(j=0,j<5,j++)
+matrizt[i][j]= matriz[j][i];
+}
+int main(){
+int m[5][5],mt[5][5];
+matrizaleatoria(m,5,5);
+imprimematriz(m,5,5);
+matriztransposta(mt,5,5);
+imprimematriz(mt,5,5);
+}
