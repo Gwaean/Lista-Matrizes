@@ -2,7 +2,7 @@
 #include<time.h>
 #include<stdio.h>
 
-int main (){
+
 void matrizaleatoria (int matriz[5][5],int i, int j);{
 srand(time(NULL));
 for(i=0,i<5,i++)
@@ -27,4 +27,5 @@ matrizaleatoria(m,5,5);
 imprimematriz(m,5,5);
 matriztransposta(mt,5,5);
 imprimematriz(mt,5,5);
+return 0;
 }
